@@ -3,7 +3,7 @@ import cors from 'cors';
 import express from 'express';
 import fileUpload from 'express-fileupload';
 import helmet from 'helmet';
-import { APP_PORT, inProd } from './config';
+import { APP_PORT, baseUrl, inProd } from './config';
 import { setLanguage } from './library/i18n.library';
 import logger from './library/morgan.library';
 import swagger from './library/swagger.library';
@@ -60,6 +60,6 @@ app.use(notFound);
 // error handler
 app.use(errorHandler);
 
-app.listen(APP_PORT, () => console.log(`Server is running on port ${APP_PORT}`));
+app.listen(APP_PORT, () => console.log(`Server is running on ${baseUrl}`));
 
 export default app;
