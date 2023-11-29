@@ -1,0 +1,27 @@
+version: "3.8"
+
+name: file-storage-dev
+
+services:
+  server:
+    tty: true
+    build:
+      context: .
+      target: dev
+    networks:
+      - app
+    volumes:
+      - /app/node_modules
+      - file-dev:/app/uploads
+      - ./:/app
+    env_file:
+      - .env
+    command: npm run start:dev
+
+volumes:
+  file-dev:
+    driver: local
+
+networks:
+  app:
+    driver: bridge

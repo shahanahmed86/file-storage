@@ -1,0 +1,26 @@
+version: "3.8"
+
+name: file-storage-test
+
+services:
+  server:
+    build:
+      context: .
+      target: test
+    restart: 'no'
+    networks:
+      - app
+    volumes:
+      - /app/node_modules
+      - file-dev:/app/uploads
+    env_file:
+      - .env
+    command: npm run exec-tests
+
+volumes:
+  file-dev:
+    driver: local
+
+networks:
+  app:
+    driver: bridge

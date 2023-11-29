@@ -1,0 +1,30 @@
+{
+	"root": true,
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["@typescript-eslint", "prettier"],
+	"env": {
+		"commonjs": true,
+		"es2021": true,
+		"node": true,
+		"mocha": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:security/recommended",
+		"prettier"
+	],
+	"overrides": [
+		{
+			"files": ["*.spec.ts"],
+			"rules": { "no-unused-expressions": "off" }
+		}
+	],
+	"rules": {
+		"prettier/prettier": "error",
+		"@typescript-eslint/no-non-null-assertion": "off",
+		"security/detect-non-literal-fs-filename": "off",
+		"security/detect-object-injection": "off"
+	}
+}

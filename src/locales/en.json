@@ -1,0 +1,17 @@
+{
+	"error": {
+		"badRequest": "Bad Request!",
+		"notFound": "Not Found!",
+		"conflict": "Conflict Error!",
+		"serverBusy": "Server is busy!",
+		"internalError": "Internal server error!",
+		"tooManyRequests": "You have exceeded the 20 requests in 15 minutes limit!",
+		"invalidLanguage": "Invalid language!"
+	},
+	"images": {
+		"upload": "Image uploaded successfully!",
+		"noAttachment": "File attachment not found!",
+		"removeImage": "Image deleted successfully!",
+		"removeImageFailed": "Image has already been deleted or doesn't exists!"
+	}
+}

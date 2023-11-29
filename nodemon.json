@@ -1,0 +1,6 @@
+{
+	"watch": ["src"],
+	"ext": ".ts,.js,.ejs,.json,.yml",
+	"ignore": ["*.migration.ts", "docker*.yml"],
+	"exec": "ts-node src/index.ts"
+}

@@ -1,0 +1,6 @@
+{
+  "**/*.{ts,js}": [
+    "npm run prettify:fix",
+    "npm run lint:fix"
+  ]
+}
